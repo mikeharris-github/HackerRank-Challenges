@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+        //set arrays for Alice and Bob
+        int[] aTrip = new int[3];
+        int[] bTrip = new int[3];
+
+        //create comparison points
+        int aPoints = 0;
+        int bPoints = 0;
+
+        //compare each score with each other: a[0] with b[0], a[1] with b[1], etc
+        //if a[i] is greater than b[i], then Alice is awarded 1 point
+        //if b[i] is greater than a]i], then Bob is awarded 1 point
+        //if a[i] = b[i], then neither person receives a point
+        // System.out.println("enter first score for Alice:");
+        int a1 = in.nextInt();
+        aTrip[0] = a1;
+        // System.out.println("enter second score for Alice:");
+        int a2 = in.nextInt();
+        aTrip[1] = a2;
+        // System.out.println("enter third score for Alice:");
+        int a3 = in.nextInt();
+        aTrip[2] = a3;
+        // System.out.println("enter first score for Bob:");
+        int b1 = in.nextInt();
+        bTrip[0] = b1;
+        // System.out.println("enter second score for Bob:");
+        int b2 = in.nextInt();
+        bTrip[1] = b2;
+        // System.out.println("enter third score for Bob:");
+        int b3 = in.nextInt();
+        bTrip[2] = b3;
+
+        for(int i = 0; i <= 2;i++){
+            // System.out.println("Alices first number is: " + aTrip[i] + "... Bob's first number is: " + bTrip[i]);
+            if (aTrip[i]>bTrip[i]) aPoints++;
+            else if (bTrip[i]>aTrip[i])  bPoints++;
+        }
+
+        System.out.println(aPoints + " " + bPoints);
+    }}
