@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Initialize
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        long bigSum = 0;
+
+        //user input
+        System.out.println("enter number of input:");
+        int tests = in.nextInt();
+        //create array and set length
+        int[] ar = new int[tests];
+        //set arrays for Alice and Bob
+
+
+        for(int i = 0; i < tests; i++){
+            System.out.println("enter long:");
+            long a1 = in.nextLong();
+            bigSum = bigSum + a1;
+        }
+
+
+        System.out.println("bigSum; " + bigSum);
+        
+    }
+}
