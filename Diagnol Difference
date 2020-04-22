@@ -1,0 +1,53 @@
+package com.mikeharrs;
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+        //ask user for input on matrix
+//        System.out.println("please enter the number of rows and columns: ");
+        int n = in.nextInt();
+
+        //create matrix
+        int[][] m = new int[n][n];
+
+        //take input
+        for(int i = 0; i<n; i++){
+            for(int j = 0; j <n; j++){
+//                System.out.println("enter integer: ");
+                int x = in.nextInt();
+                m[i][j] = x;
+            }
+        }
+
+
+        //add first diagnol
+        int d1 = 0;
+        for(int i = 0; i<n;i++){
+            d1 += m[i][i];
+        }
+//        System.out.println("Sum of first diagonol: " + d1);
+
+        int d2 = 0;
+        for(int i = 1; i<=n;i++){
+//            System.out.println("n = " + i);
+            d2 += m[n-i][i-1];
+//            System.out.println("d2 = " + d2);
+        }
+//        System.out.println("Sum of second diagonol: " + d2);
+
+        //test print
+        //take input
+//        for(int i = 0; i<n; i++){
+//            for(int j = 0; j <n; j++){
+//                System.out.println(m[i][j]);
+//            }
+//        }
+
+        //find the difference between the two numbers by using absolute value; otherwise result can be negative
+        System.out.println(Math.abs(d1-d2));
+
+    }}
