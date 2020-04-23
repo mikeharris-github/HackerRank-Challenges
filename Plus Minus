@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+        //ask for the number that dictates the size of the array
+        int n = in.nextInt();
+
+        int[] arr = new int[n];
+
+        for(int i =0; i < n; i++){
+//            System.out.println("Enter an integer: ");
+            arr[i] = in.nextInt();
+        }
+
+        float posCounter = 0;
+        float negCounter = 0;
+        float zeroCounter = 0;
+
+        for(int i:arr){
+            if(i>0) posCounter++;
+            else if(i<0) negCounter++;
+            else zeroCounter++;
+        }
+
+//        float posNum = posCounter/n;
+//        float negNum = negCounter/n;
+//        float zeroNum = zeroCounter/n;
+
+        System.out.printf("%.6f %n",posCounter/n);
+        System.out.printf("%.6f %n",negCounter/n);
+        System.out.printf("%.6f %n",zeroCounter/n);
+
+    }}
