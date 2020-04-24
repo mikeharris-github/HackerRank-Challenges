@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+        //ask for the number that dictates the size of the array
+        // System.out.println("enter the number for the size of the staircase: ");
+        int n = in.nextInt();
+
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<n;j++){
+                if(j<(n-1-i)){
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("#");
+                }
+            }
+            System.out.println("");
+        }
+    }}
